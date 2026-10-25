@@ -13,7 +13,7 @@ function layout_inicio(string $titulo): void
 </head>
 <body>
 <header>
-  <a href="/" class="marca">Registro de Estudiantes</a>
+  <a href="/" class="marca">Registro de Estudiantes<?php if (getenv('APP_SUBTITULO')): ?> <small>· <?= e(getenv('APP_SUBTITULO')) ?></small><?php endif; ?></a>
   <span class="meta">PHP <?= PHP_VERSION ?> · PostgreSQL · pod <?= e(gethostname()) ?></span>
 </header>
 <main>
@@ -25,7 +25,7 @@ function layout_inicio(string $titulo): void
 function layout_fin(): void
 { ?>
 </main>
-<footer>App 1 (stack clasico) · desplegada en Kompilo PaaS</footer>
+<footer>App 1 (stack clasico) · v1.1 · desplegada en Kompilo PaaS</footer>
 </body>
 </html>
 <?php }

@@ -61,6 +61,13 @@ switch (true) {
             'email'   => trim($_POST['email'] ?? ''),
             'carrera' => trim($_POST['carrera'] ?? ''),
         ];
+        foreach ($est as $valor) {
+            if (!preg_match('//u', $valor)) {
+                $errores[] = 'Los datos deben enviarse en UTF-8.';
+                $est = array_map(fn($v) => preg_match('//u', $v) ? $v : '', $est);
+                break;
+            }
+        }
         if ($est['carnet'] === '')  $errores[] = 'El carnet es obligatorio.';
         if ($est['nombre'] === '')  $errores[] = 'El nombre es obligatorio.';
         if (!filter_var($est['email'], FILTER_VALIDATE_EMAIL)) $errores[] = 'El correo no es valido.';
