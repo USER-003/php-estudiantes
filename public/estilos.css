@@ -1,0 +1,29 @@
+:root { --fondo: #f6f7f9; --texto: #1d2330; --suave: #6b7280; --marca: #4f46e5; --borde: #e3e6ec; --peligro: #dc2626; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--fondo); color: var(--texto); }
+header { display: flex; flex-wrap: wrap; gap: .5rem 1rem; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: #111827; color: #fff; }
+header .marca { color: #fff; font-weight: 700; text-decoration: none; font-size: 1.1rem; }
+header .meta { color: #9ca3af; }
+main { max-width: 1000px; margin: 1.5rem auto; padding: 0 1rem; }
+footer { text-align: center; color: var(--suave); font-size: .85rem; padding: 2rem 1rem; }
+.meta { color: var(--suave); font-size: .85rem; }
+.aviso { background: #ecfdf5; border: 1px solid #a7f3d0; color: #065f46; padding: .6rem .9rem; border-radius: 8px; margin-bottom: 1rem; }
+.errores { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; padding: .6rem 1.8rem; border-radius: 8px; }
+.barra { display: flex; flex-wrap: wrap; gap: .75rem; justify-content: space-between; margin-bottom: 1rem; }
+.buscar { display: flex; gap: .5rem; flex: 1; min-width: 240px; }
+.buscar input { flex: 1; }
+input { padding: .55rem .7rem; border: 1px solid var(--borde); border-radius: 8px; font: inherit; width: 100%; }
+button, .boton { background: var(--marca); color: #fff; border: 0; padding: .55rem 1rem; border-radius: 8px; font: inherit; cursor: pointer; text-decoration: none; white-space: nowrap; }
+button.peligro { background: none; color: var(--peligro); padding: 0; }
+.tabla { overflow-x: auto; background: #fff; border: 1px solid var(--borde); border-radius: 10px; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: .65rem .8rem; border-bottom: 1px solid var(--borde); }
+th { font-size: .8rem; text-transform: uppercase; color: var(--suave); }
+.acciones { display: flex; gap: .8rem; align-items: center; }
+.acciones form { margin: 0; }
+.acciones a { color: var(--marca); }
+.vacio { background: #fff; border: 1px dashed var(--borde); padding: 2rem; text-align: center; border-radius: 10px; color: var(--suave); }
+.formulario { display: grid; gap: .9rem; max-width: 480px; background: #fff; padding: 1.25rem; border: 1px solid var(--borde); border-radius: 10px; }
+.formulario label { display: grid; gap: .3rem; font-weight: 600; font-size: .9rem; }
+.botones { display: flex; gap: 1rem; align-items: center; }
+pre { background: #fff; border: 1px solid var(--borde); padding: 1rem; overflow-x: auto; }
